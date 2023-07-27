@@ -13,14 +13,14 @@ namespace DataStructureProblem
             Console.WriteLine("Enter the Length of the Array");
             int length = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the Elements of the Array");
-            int[] array= new int[length];
+            char[] array= new char[length];
             for(int i=0;i<length;i++)
             {
-                array[i] = Convert.ToInt32(Console.ReadLine());
+                array[i] = Convert.ToChar(Console.ReadLine());
             }
             for(int i=1;i<length;i++)
             {
-                int a = array[i];
+                char a = array[i];
                 int j = i - 1;
                 while (j >= 0 && array[j] > a )
                 {
@@ -31,7 +31,7 @@ namespace DataStructureProblem
             }
             for(int i=0;i<length;i++)
             {
-                Console.Write(array[i]+" ");
+                Console.Write(array[i] + " ");
             }
         }
     }
