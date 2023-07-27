@@ -36,6 +36,10 @@ class program
                     bubble.bubblesort(filepath);
                     break;
                 case 6:
+                    PrimeNumber prime = new PrimeNumber();
+                    prime.primenumber();
+                    break;
+                case 7:
                     flag = false;
                     break;
             }   
