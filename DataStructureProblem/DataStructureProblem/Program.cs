@@ -10,7 +10,7 @@ class program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Exit");
+            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Anagram\n3.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -21,7 +21,7 @@ class program
                     break;
                 case 2:
                     Anagram anagram = new Anagram();
-                    anagram.CheckAnagram();
+                    anagram.checkAnagram();
                     break;
                 case 3:
                     flag = false;
