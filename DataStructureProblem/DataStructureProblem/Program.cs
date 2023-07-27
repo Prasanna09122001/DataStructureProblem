@@ -10,7 +10,7 @@ class program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Anagram\n3.Replace String\n4.Insertion Sort\n5.Exit");
+            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Anagram\n3.Replace String\n4.Insertion Sort\n5.Buuble Sort\n6.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -32,6 +32,10 @@ class program
                     insertionsort.insertionsort();
                     break;
                 case 5:
+                    BubbleSort bubble = new BubbleSort();
+                    bubble.bubblesort();
+                    break;
+                case 6:
                     flag = false;
                     break;
             }   
