@@ -28,6 +28,10 @@ class program
                     replaceString.replacestring();
                     break;
                 case 4:
+                    Insertionsort insertionsort = new Insertionsort();
+                    insertionsort.insertionsort();
+                    break;
+                case 5:
                     flag = false;
                     break;
             }   
