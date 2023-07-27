@@ -31,7 +31,7 @@ namespace DataStructureProblem
             }
             for(int i=0;i<length;i++)
             {
-                Console.WriteLine(array[i]+" ");
+                Console.Write(array[i]+" ");
             }
         }
     }
