@@ -10,7 +10,7 @@ class program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Anagram\n3.Exit");
+            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Anagram\n3.Replace String\n4.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -24,6 +24,10 @@ class program
                     anagram.checkAnagram();
                     break;
                 case 3:
+                    ReplaceString replaceString = new ReplaceString();
+                    replaceString.replacestring();
+                    break;
+                case 4:
                     flag = false;
                     break;
             }   
