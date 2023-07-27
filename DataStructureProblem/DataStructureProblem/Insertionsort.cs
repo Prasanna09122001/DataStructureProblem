@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,12 @@ namespace DataStructureProblem
 {
     internal class Insertionsort
     {
-        public void insertionsort()
+        public void insertionsort(string Filepath)
         {
-            Console.WriteLine("Enter the Length of the Array");
-            int length = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Elements of the Array");
-            char[] array= new char[length];
-            for(int i=0;i<length;i++)
-            {
-                array[i] = Convert.ToChar(Console.ReadLine());
-            }
-            for(int i=1;i<length;i++)
+            string readAllText = File.ReadAllText(Filepath);
+            string arr = readAllText.Replace(",","");
+            char[] array= arr.ToCharArray();
+            for(int i=1;i<array.Length;i++)
             {
                 char a = array[i];
                 int j = i - 1;
@@ -29,7 +25,7 @@ namespace DataStructureProblem
                 }
                 array[j + 1] = a;
             }
-            for(int i=0;i<length;i++)
+            for(int i=0;i<array.Length;i++)
             {
                 Console.Write(array[i] + " ");
             }

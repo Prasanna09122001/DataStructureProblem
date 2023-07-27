@@ -8,19 +8,14 @@ namespace DataStructureProblem
 {
     internal class BubbleSort
     {
-        public void bubblesort()
+        public void bubblesort(string Filepath)
         {
-            Console.WriteLine("Enter the Length of the Array");
-            int length = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Elements of the Array");
-            char[] array = new char[length];
-            for (int i = 0; i < length; i++)
+            string readAllText = File.ReadAllText(Filepath);
+            string arr = readAllText.Replace(",", "");
+            char[] array = arr.ToCharArray();
+            for(int i=0;i<array.Length-1;i++)
             {
-                array[i] = Convert.ToChar(Console.ReadLine());
-            }
-            for(int i=0;i<length-1;i++)
-            {
-                for(int j=0;j<length-i-1;j++)
+                for(int j=0;j<array.Length-i-1;j++)
                 {
                     if (array[j] > array[j+1])
                     {
@@ -30,9 +25,9 @@ namespace DataStructureProblem
                     }
                 }
             }
-            for(int i=0;i<length;i++)
+            for(int i=0;i<array.Length;i++)
             {
-                Console.WriteLine(array[i]+" ");
+                Console.Write(array[i]+" ");
             }
         }
     }
