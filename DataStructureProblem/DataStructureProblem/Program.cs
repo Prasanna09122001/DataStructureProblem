@@ -1,16 +1,18 @@
-﻿using System;
+﻿using DataStructureProblem.UnorderedList;
+using System;
 
 namespace DataStructureProblem.Files;
 
 class program
 {
     static string filepath = @"D:\Bridgelabz Statement\DataStructureProblem\DataStructureProblem\DataStructureProblem\DataStructureProblem\Files\Search.txt";
+    static string filepath1 = @"D:\Bridgelabz Statement\DataStructureProblem\DataStructureProblem\DataStructureProblem\DataStructureProblem\UnorderedList\UnorderedList.txt";
     static void Main()
     {
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter the option to Execute\n1.Binary Search\n2.Anagram\n3.Replace String\n4.Insertion Sort\n5.Bubble Sort\n6.Exit");
+            Console.WriteLine("\nEnter the option to Execute\n1.Binary Search\n2.Anagram\n3.Replace String\n4.Insertion Sort\n5.Bubble Sort\n6.Prime Number\n7.Palindrome Number\n8..Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -40,6 +42,16 @@ class program
                     prime.primenumber();
                     break;
                 case 7:
+                    PalindromeAndAnagram palindromeAndAnagram = new PalindromeAndAnagram();
+                    palindromeAndAnagram.palindromeandanagram();
+                    palindromeAndAnagram.Palindrome();
+                 //   palindromeAndAnagram.Anagram();
+                    break;
+                case 8:
+                    Operation operation = new Operation();
+                    operation.ReadFileAndPerformOperation(filepath1);
+                    break;
+                case 9:
                     flag = false;
                     break;
             }   
