@@ -43,3 +43,11 @@ namespace DataStructureProblem
         }
     }
 }
+        /* public bool AreAnagrams(int num1, int num2)
+        {
+            char[] num1Array = num1.ToString().ToCharArray();
+            char[] num2Array = num2.ToString().ToCharArray();
+            Array.Sort(num1Array);
+            Array.Sort(num2Array);
+            return new string(num1Array) == new string(num2Array);
+        }*/

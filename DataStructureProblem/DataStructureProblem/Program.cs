@@ -47,7 +47,7 @@ class program
                     PalindromeAndAnagram palindromeAndAnagram = new PalindromeAndAnagram();
                     palindromeAndAnagram.palindromeandanagram();
                     palindromeAndAnagram.Palindrome();
-                 //   palindromeAndAnagram.Anagram();
+                    palindromeAndAnagram.Anagram();
                     break;
                 case 8:
                     Operation operation = new Operation();
