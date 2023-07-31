@@ -151,17 +151,6 @@ namespace DataStructureProblem.UnorderedList
             Node<T> next = temp.next.next;
             temp.next = next;
         }
-        public void Operation(T word)
-        {
-            int position = search(word);
-            if (position == -1)
-            {
-                Add(word);
-            }
-            else
-            {
-                DeleteNodeAtParticularPosition(position);
-            }
-        }
+        
     }
 }

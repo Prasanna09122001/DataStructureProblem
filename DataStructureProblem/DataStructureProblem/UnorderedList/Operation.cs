@@ -8,9 +8,9 @@ namespace DataStructureProblem.UnorderedList
 {
     internal class Operation
     {
+        List<string> list = new List<string>();
         public void ReadFileAndPerformOperation(string filepath)
-        {
-            List<string> list = new List<string>();
+        { 
             string readAllText = File.ReadAllText(filepath);
             string[] words = readAllText.Split(" ");
             foreach (var data in words)
@@ -19,9 +19,25 @@ namespace DataStructureProblem.UnorderedList
             }
             Console.WriteLine("Before Text:");
             list.Display();
-            list.Operation("the");
+            Console.WriteLine("Enter the word");
+            string word = Console.ReadLine();
+            int position = list.search(word);
+            if(position == -1)
+            {
+                list.Add(word);
+            }
+            else
+            {
+                list.DeleteNodeAtParticularPosition(position);
+            }
             Console.WriteLine("\nAfter Text:");
             list.Display();
+        }
+        public void WriteToFile(string filepath)
+        {
+            string content = string.Join(",", list);
+            Console.WriteLine(content);
+            File.WriteAllText(filepath, content);
         }
     }
 }
