@@ -2,6 +2,7 @@
 using DataStructureProblem.BankProblem;
 using DataStructureProblem.OrderedList;
 using DataStructureProblem.UnorderedList;
+using DataStructureProblem.Hashing;
 using System;
 
 namespace DataStructureProblem.Files;
@@ -12,6 +13,7 @@ class program
     static string filepath1 = @"D:\Bridgelabz Statement\DataStructureProblem\DataStructureProblem\DataStructureProblem\DataStructureProblem\UnorderedList\UnorderedList.txt";
     static string filepath2 = @"D:\Bridgelabz Statement\DataStructureProblem\DataStructureProblem\DataStructureProblem\DataStructureProblem\OrderedList\orderedList.txt";
     static string filepath3 = @"D:\Bridgelabz Statement\DataStructureProblem\DataStructureProblem\DataStructureProblem\DataStructureProblem\BalancedParenthesis\Balanced.txt";
+    static string filepath4 = @"D:\Bridgelabz Statement\DataStructureProblem\DataStructureProblem\DataStructureProblem\DataStructureProblem\Hashing\HashTable.txt";
     static void Main()
     {
         bool flag = true;
@@ -72,6 +74,11 @@ class program
                     bank.AddPersonsInQueue();
                     break;
                 case 12:
+                    HashingOperation hashingOperation = new HashingOperation();
+                    hashingOperation.ReadFile(filepath4);
+                    hashingOperation.Display();
+                    break;
+                case 13:
                     flag = false;
                     break;
             }   

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructureProblem.UnorderedList
 {
-    internal class List<T>
+    public class List<T>
     {
         internal Node<T> head;
         internal void Add(T data)
